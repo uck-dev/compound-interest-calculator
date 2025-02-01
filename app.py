@@ -12,8 +12,6 @@ about = """
     - Calculate compound interest with low, mid, and high interest rates.
     - Visualize the growth of your investment with interactive plots.
     - View detailed data for each interest rate scenario.
-    
-    Developed by <a href="https://www.linkedin.com/in/umutcankocaman/" target="_blank">Umut Can Kocaman</a>.
 """
 
 st.set_page_config(
