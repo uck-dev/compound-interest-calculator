@@ -2,18 +2,6 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-about = """
-    ## Compound Interest Calculator with Interest Rate Variance
-    This application helps you calculate the compound interest with varying interest rates over time.
-    You can input your initial principal, annual interest rate, investment period, monthly additions, 
-    and annual addition increase rate to see how your investment grows over time.
-    
-    ### Features:
-    - Calculate compound interest with low, mid, and high interest rates.
-    - Visualize the growth of your investment with interactive plots.
-    - View detailed data for each interest rate scenario.
-"""
-
 st.set_page_config(
     page_title="Compound Interest Calculator",
     page_icon=":bar_chart:",
@@ -128,6 +116,19 @@ def get_language_settings(language, currency_symbol):
                 "annual_addition_increase": "Annual increase rate for the monthly addition (must be 0 or greater)",
                 "rate_variance": "Interest rate variance percentage between 0-100%",
             },
+            "about": """
+                ## Compound Interest Calculator with Interest Rate Variance
+                This application helps you calculate the compound interest with varying interest rates over time.
+                You can input your initial principal, annual interest rate, investment period, monthly additions, 
+                and annual addition increase rate to see how your investment grows over time.
+                
+                ### Features:
+                - Calculate compound interest with low, mid, and high interest rates.
+                - Visualize the growth of your investment with interactive plots.
+                - View detailed data for each interest rate scenario.
+
+                Please note that, calues produced are for illustrative purposes only and do not constitute advice.
+            """,
         }
     else:
         return {
@@ -159,6 +160,19 @@ def get_language_settings(language, currency_symbol):
                 "annual_addition_increase": "Aylık katkı artış oranı (0 veya daha büyük olmalıdır)",
                 "rate_variance": "Faiz oranı değişim yüzdesi (0-100% arası)",
             },
+            "about": """
+                ## Bileşik Faiz/Getiri Hesaplayıcısı (Faiz Oranı Varyasyonu ile)
+                Bu uygulama, zaman içindeki değişen faiz oranlarıyla bileşik faizi hesaplamanıza yardımcı olur.
+                Başlangıç ana paranızı, yıllık faiz oranınızı, yatırım sürenizi, aylık eklemelerinizi ve yıllık ekleme artış oranınızı girerek yatırımınızın zaman içinde nasıl büyüdüğünü görebilirsiniz.
+                
+                ### Özellikler:
+
+                - Düşük, orta ve yüksek faiz oranlarıyla bileşik faizi hesaplayın.
+                - Yatırımınızın büyümesini interaktif grafiklerle görselleştirin.
+                - Her faiz oranı senaryosu için ayrıntılı verileri görüntüleyin.
+
+                Lütfen üretilen değerlerin yalnızca örnek amaçlı olduğunu ve tavsiye niteliğinde olmadığını unutmayın.
+                """,
         }
 
 
@@ -173,15 +187,15 @@ with col2:
         "Select Currency", ["₺ - TRY", "$ - USD", "€ - EUR", "£ - GBP"]
     )
 
-with st.sidebar:
-    st.image("img/sidebar_logo.png", width=200)
-    st.markdown(about, unsafe_allow_html=True)
-
 # Currency symbol and code
 currency_symbol, currency_code = currency.split(" - ")
 
 # Get language-specific settings
 settings = get_language_settings(language, currency_symbol)
+
+with st.sidebar:
+    st.image("img/sidebar_logo.png", width=200)
+    st.markdown(settings["about"], unsafe_allow_html=True)
 
 # Set UI elements
 st.title(settings["title"])
