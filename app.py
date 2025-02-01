@@ -21,10 +21,10 @@ st.set_page_config(
     page_icon=":bar_chart:",
     layout="wide",
     menu_items={
-        "Get Help": "https://github.com/uckocaman",
-        "Report a Bug": "https://github.com/uckocaman",
+        "Get Help": "https://github.com/uckocaman/compound-interest-calculator",
+        "Report a Bug": "https://github.com/uckocaman/compound-interest-calculator/issues",
         "About": about,
-    },  # TODO - Update links
+    },
 )
 
 

@@ -8,14 +8,14 @@ This application helps you calculate the compound interest with varying interest
 - View detailed data for each interest rate scenario.
 
 ## Usage
-You can access the application at [www.tbd.com](http://www.tbd.com).
+You can access the application at [compound-interest-calculator.app](https://compound-interest-calculator.streamlit.app).
 
 ## Installation
 To run the application locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/tbd/compound-interest-calculator.git
+    git clone https://github.com/uckocaman/compound-interest-calculator.git
     cd compound-interest-calculator
     ```
 
