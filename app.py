@@ -180,7 +180,7 @@ with st.sidebar:
     st.image("img/sidebar_logo.png", width=200)
     st.write(about)
 
-# Para birimi sembolünü ve kısaltmasını ayarlama
+# Currency symbol and code
 currency_symbol, currency_code = currency.split(" - ")
 
 # Get language-specific settings
