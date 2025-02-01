@@ -13,7 +13,7 @@ about = """
     - Visualize the growth of your investment with interactive plots.
     - View detailed data for each interest rate scenario.
     
-    Developed by [Your Name].
+    Developed by <a href="https://www.linkedin.com/in/umutcankocaman/" target="_blank">Umut Can Kocaman</a>.
 """
 
 st.set_page_config(
@@ -23,7 +23,6 @@ st.set_page_config(
     menu_items={
         "Get Help": "https://github.com/uckocaman/compound-interest-calculator",
         "Report a Bug": "https://github.com/uckocaman/compound-interest-calculator/issues",
-        "About": about,
     },
 )
 
@@ -178,7 +177,7 @@ with col2:
 
 with st.sidebar:
     st.image("img/sidebar_logo.png", width=200)
-    st.write(about)
+    st.markdown(about, unsafe_allow_html=True)
 
 # Currency symbol and code
 currency_symbol, currency_code = currency.split(" - ")
