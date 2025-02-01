@@ -127,7 +127,7 @@ def get_language_settings(language, currency_symbol):
                 - Visualize the growth of your investment with interactive plots.
                 - View detailed data for each interest rate scenario.
 
-                Please note that, calues produced are for illustrative purposes only and do not constitute advice.
+                Please note that, values produced are for illustrative purposes only and do not constitute advice.
             """,
         }
     else:
